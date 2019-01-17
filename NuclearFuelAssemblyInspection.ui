@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NuclearFuelAssemblyInspectionClass</class>
+ <widget class="QMainWindow" name="NuclearFuelAssemblyInspectionClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1366</width>
+    <height>816</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>微软雅黑</family>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>燃料组件形变在位测量系统</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>48</width>
+    <height>48</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_Image_Visualization">
+       <attribute name="title">
+        <string>二维图像显示</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_3D_Visualization">
+       <attribute name="title">
+        <string>三维模型显示</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1366</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="action_File_New"/>
+    <addaction name="action_File_Open"/>
+    <addaction name="action_File_Save"/>
+    <addaction name="action_File_Save_As"/>
+    <addaction name="action_File_Close"/>
+    <addaction name="separator"/>
+    <addaction name="action_File_Exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Measure">
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>测量系统(&amp;M)</string>
+    </property>
+    <addaction name="action_Measure_Connect"/>
+    <addaction name="action_Measure_Reconnect"/>
+    <addaction name="action_Measure_Disconnect"/>
+    <addaction name="separator"/>
+    <addaction name="action_Measure_System_Calibration"/>
+    <addaction name="action_Measure_3D_Measurement"/>
+   </widget>
+   <widget class="QMenu" name="menu_Report">
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>报表输出(&amp;R)</string>
+    </property>
+    <addaction name="action_Report_Excel"/>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="action_Help_About"/>
+   </widget>
+   <widget class="QMenu" name="menu_View">
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>显示(&amp;D)</string>
+    </property>
+    <addaction name="action_View_Fit_All"/>
+    <addaction name="action_View_Zoom_to_Data"/>
+    <addaction name="separator"/>
+    <addaction name="action_View_Front"/>
+    <addaction name="action_View_Back"/>
+    <addaction name="action_View_Left"/>
+    <addaction name="action_View_Right"/>
+    <addaction name="action_View_Top"/>
+    <addaction name="action_View_Bottom"/>
+    <addaction name="action_View_Isometric"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_View"/>
+   <addaction name="menu_Measure"/>
+   <addaction name="menu_Report"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget_Sensor">
+   <property name="windowTitle">
+    <string>测量传感器</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QTreeWidget" name="treeWidget_Sensor_List">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="autoExpandDelay">
+        <number>1</number>
+       </property>
+       <property name="columnCount">
+        <number>2</number>
+       </property>
+       <column>
+        <property name="text">
+         <string notr="true">项目</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string notr="true">数值</string>
+        </property>
+       </column>
+       <item>
+        <property name="text">
+         <string>员工信息：</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>姓名：</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>工号：</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>工程信息：</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>工件型号：</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>传感器1：</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>序列号：</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>曝光：</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>增益：</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>传感器2：</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>序列号：</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>曝光：</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>增益：</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_Results">
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="windowTitle">
+    <string>在位测量结果</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QTableWidget" name="tableWidget_Measurement_Results">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <row>
+        <property name="text">
+         <string>Part1.x</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Part1.y</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Part1.z</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Part1.x(α)</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Part1.y(β)</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Part1.z(β)</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>数值</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string/>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>数值</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string/>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>数值</string>
+        </property>
+       </column>
+       <item row="0" column="0">
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item row="0" column="1">
+        <property name="text">
+         <string>Part2.x</string>
+        </property>
+       </item>
+       <item row="0" column="3">
+        <property name="text">
+         <string>扭摆</string>
+        </property>
+       </item>
+       <item row="1" column="1">
+        <property name="text">
+         <string>Part2.y</string>
+        </property>
+       </item>
+       <item row="1" column="3">
+        <property name="text">
+         <string>弯曲</string>
+        </property>
+       </item>
+       <item row="2" column="1">
+        <property name="text">
+         <string>Part2.z</string>
+        </property>
+       </item>
+       <item row="2" column="3">
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item row="3" column="1">
+        <property name="text">
+         <string>Part2.x(α)</string>
+        </property>
+       </item>
+       <item row="3" column="3">
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item row="4" column="1">
+        <property name="text">
+         <string>Part2.y(β)</string>
+        </property>
+       </item>
+       <item row="5" column="1">
+        <property name="text">
+         <string>Part2.z(β)</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar_File">
+   <property name="iconSize">
+    <size>
+     <width>64</width>
+     <height>64</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_File_New"/>
+   <addaction name="action_File_Open"/>
+   <addaction name="action_File_Save"/>
+   <addaction name="action_File_Save_As"/>
+   <addaction name="action_File_Close"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_View">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>64</width>
+     <height>64</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_View_Fit_All"/>
+   <addaction name="action_View_Zoom_to_Data"/>
+   <addaction name="action_View_Front"/>
+   <addaction name="action_View_Back"/>
+   <addaction name="action_View_Left"/>
+   <addaction name="action_View_Right"/>
+   <addaction name="action_View_Top"/>
+   <addaction name="action_View_Bottom"/>
+   <addaction name="action_View_Isometric"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_Measure">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>64</width>
+     <height>64</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Measure_Connect"/>
+   <addaction name="action_Measure_Reconnect"/>
+   <addaction name="action_Measure_Disconnect"/>
+   <addaction name="action_Measure_System_Calibration"/>
+   <addaction name="action_Measure_3D_Measurement"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_Output">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>64</width>
+     <height>64</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Report_Excel"/>
+  </widget>
+  <action name="action_File_New">
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/document-new (2).png</normaloff>Resources/images/document-new (2).png</iconset>
+   </property>
+   <property name="text">
+    <string>新建工程(&amp;N)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_File_Open">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/open-file.png</normaloff>Resources/images/open-file.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开工程(&amp;O)</string>
+   </property>
+  </action>
+  <action name="action_File_Close">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/delete.png</normaloff>Resources/images/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>关闭工程(&amp;C)</string>
+   </property>
+  </action>
+  <action name="action_File_Exit">
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/system-log-out.png</normaloff>Resources/images/system-log-out.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出(&amp;E)</string>
+   </property>
+  </action>
+  <action name="action_Measure_Connect">
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/connected.png</normaloff>Resources/images/connected.png</iconset>
+   </property>
+   <property name="text">
+    <string>连接系统</string>
+   </property>
+  </action>
+  <action name="action_Measure_Reconnect">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/refresh.png</normaloff>Resources/images/refresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>重连系统</string>
+   </property>
+  </action>
+  <action name="action_Measure_Disconnect">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/disconnected.png</normaloff>Resources/images/disconnected.png</iconset>
+   </property>
+   <property name="text">
+    <string>断开系统</string>
+   </property>
+  </action>
+  <action name="action_Measure_3D_Measurement">
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/photo-camera.png</normaloff>Resources/images/photo-camera.png</iconset>
+   </property>
+   <property name="text">
+    <string>三维测量(&amp;M)</string>
+   </property>
+  </action>
+  <action name="action_View_Fit_All">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/blue-magnifier.png</normaloff>Resources/images/blue-magnifier.png</iconset>
+   </property>
+   <property name="text">
+    <string>最适化(&amp;F)</string>
+   </property>
+  </action>
+  <action name="action_File_Save">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/save-file.png</normaloff>Resources/images/save-file.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存工程(&amp;S)</string>
+   </property>
+  </action>
+  <action name="action_File_Save_As">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/save-as.png</normaloff>Resources/images/save-as.png</iconset>
+   </property>
+   <property name="text">
+    <string>另存工程(&amp;A)</string>
+   </property>
+  </action>
+  <action name="action_Measure_System_Calibration">
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/color-balance.png</normaloff>Resources/images/color-balance.png</iconset>
+   </property>
+   <property name="text">
+    <string>参数标定(&amp;C)</string>
+   </property>
+  </action>
+  <action name="action_Help_About">
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/yes-v3.png</normaloff>Resources/images/yes-v3.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于(&amp;A)</string>
+   </property>
+  </action>
+  <action name="action_View_Zoom_to_Data">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/ZoomToData.png</normaloff>Resources/images/ZoomToData.png</iconset>
+   </property>
+   <property name="text">
+    <string>适合放大(&amp;Z)</string>
+   </property>
+  </action>
+  <action name="action_View_Front">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/front-side.png</normaloff>Resources/images/front-side.png</iconset>
+   </property>
+   <property name="text">
+    <string>正视图(&amp;F)</string>
+   </property>
+  </action>
+  <action name="action_View_Back">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/back-side.png</normaloff>Resources/images/back-side.png</iconset>
+   </property>
+   <property name="text">
+    <string>后视图(&amp;B)</string>
+   </property>
+  </action>
+  <action name="action_View_Left">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/left-side.png</normaloff>Resources/images/left-side.png</iconset>
+   </property>
+   <property name="text">
+    <string>左视图(&amp;L)</string>
+   </property>
+   <property name="toolTip">
+    <string>左视图</string>
+   </property>
+  </action>
+  <action name="action_View_Right">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/right-side.png</normaloff>Resources/images/right-side.png</iconset>
+   </property>
+   <property name="text">
+    <string>右视图(&amp;R)</string>
+   </property>
+  </action>
+  <action name="action_View_Top">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/top-side.png</normaloff>Resources/images/top-side.png</iconset>
+   </property>
+   <property name="text">
+    <string>俯视图(&amp;T)</string>
+   </property>
+  </action>
+  <action name="action_View_Bottom">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/bottom-side.png</normaloff>Resources/images/bottom-side.png</iconset>
+   </property>
+   <property name="text">
+    <string>仰视图(&amp;B)</string>
+   </property>
+  </action>
+  <action name="action_View_Isometric">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/cube.png</normaloff>Resources/images/cube.png</iconset>
+   </property>
+   <property name="text">
+    <string>轴视图(&amp;I)</string>
+   </property>
+  </action>
+  <action name="action_Report_Excel">
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/images/Blocnote.png</normaloff>Resources/images/Blocnote.png</iconset>
+   </property>
+   <property name="text">
+    <string>输出Excel(&amp;E)</string>
+   </property>
+  </action>
+  <zorder>dockWidget_Sensor</zorder>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="NuclearFuelAssemblyInspection.qrc"/>
+ </resources>
+ <connections/>
+</ui>

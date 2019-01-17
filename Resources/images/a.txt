@@ -1,0 +1,89 @@
+ 驱动器 E 中的卷没有标签。
+ 卷的序列号是 58DA-D5CC
+
+ E:\xiaobo.programming\3DVisionSolutions\3DVisionSolutions\Resources\images 的目录
+
+2017/12/28  23:51    <DIR>          .
+2017/12/28  23:51    <DIR>          ..
+2017/12/28  23:51                 0 a.txt
+2017/12/28  23:32             7,456 add (1).png
+2017/12/28  23:36            35,700 Add (2).png
+2017/12/28  23:18             5,636 add-v2.png
+2017/12/28  23:31             7,456 add.png
+2017/12/28  23:19            29,881 align-bottoms.png
+2017/12/28  23:19            29,766 align-horizontal-centers.png
+2017/12/28  23:18            31,083 align-left.png
+2017/12/28  23:18            30,002 align-tops.png
+2017/12/28  23:18            36,293 align-vertical-centers.png
+2017/12/28  23:18            33,690 apple.png
+2017/12/28  23:17             9,744 attach.png
+2017/12/28  23:17            31,309 back-side.png
+2017/12/28  23:33            51,209 Blocnote.png
+2017/12/28  23:17            22,792 blue-cube.png
+2017/12/28  23:17            20,805 blue-magnifier.png
+2017/12/28  23:17            33,626 bottom-side.png
+2017/12/28  23:35            16,295 browser.png
+2017/12/28  23:28            59,950 clear.png
+2017/12/28  23:37            80,802 close.png
+2017/12/28  23:17            20,494 color-balance.png
+2017/12/28  23:40             3,380 connect (1).png
+2017/12/28  23:39             3,060 connect.png
+2017/12/28  23:40            42,067 connectivity.png
+2017/12/28  23:15             6,990 copy.png
+2017/12/28  23:15            60,525 cube.png
+2017/12/28  23:15             7,262 delete-v2.png
+2017/12/28  23:37            51,752 delete.png
+2017/12/28  23:39             3,061 disconnect.png
+2017/12/28  23:38            18,722 document-new.png
+2017/12/28  23:37            52,027 document.png
+2017/12/28  23:37            74,583 document_add.png
+2017/12/28  23:37            70,984 document_delete.png
+2017/12/28  23:33            46,925 Dossier-Blue-Normal.png
+2017/12/28  23:33            53,347 Dossier-Blue-Papier.png
+2017/12/28  23:15            33,678 empty-dustbin.png
+2017/12/28  23:15            12,006 erase.png
+2017/12/28  23:15             8,680 eraser-v2.png
+2017/12/28  23:15             6,677 eraser-v3.png
+2017/12/28  23:35             6,020 error.png
+2017/12/28  23:16            36,223 eye.png
+2017/12/28  23:17            10,473 favorites-star.png
+2017/12/28  23:30             6,026 folder-add.png
+2017/12/28  23:36            26,963 Folder-Blue+Add.png
+2017/12/28  23:36            10,205 Folder-Blue.png
+2017/12/28  23:35             8,139 folder-skyblue.png
+2017/12/28  23:36            14,150 Folder.png
+2017/12/28  23:35             9,979 foldernew.png
+2017/12/28  23:37            88,267 folder_delete.png
+2017/12/28  23:14            24,354 front-side.png
+2017/12/28  23:36             3,038 Generic+File.png
+2017/12/28  23:35             7,021 important.png
+2017/12/28  23:13            34,310 left-side.png
+2017/12/28  23:10            41,277 open-file.png
+2017/12/28  23:37            64,785 open.png
+2017/12/28  23:13            56,340 photo-camera.png
+2017/12/28  23:16             6,615 portrait.png
+2017/12/28  23:37            64,585 recycle.png
+2017/12/28  23:13            10,197 redo.png
+2017/12/28  23:13            13,434 refresh.png
+2017/12/28  23:13            39,502 right-side.png
+2017/12/28  23:19            73,441 road.png
+2017/12/28  23:20            17,935 save-as.png
+2017/12/28  23:12            14,673 save-file.png
+2017/12/28  23:29             9,314 save.png
+2017/12/28  23:12            53,547 settings.png
+2017/12/28  23:39            28,420 smooth-drop.png
+2017/12/28  23:34            30,511 stariconrt2.png
+2017/12/28  23:34            54,222 The-Sims.png
+2017/12/28  23:14            36,806 top-side.png
+2017/12/28  23:14            46,887 torus.png
+2017/12/28  23:35             8,889 trash-empty.png
+2017/12/28  23:35            11,593 trash-full.png
+2017/12/28  23:28            32,027 trash.png
+2017/12/28  23:16             9,398 undo.png
+2017/12/28  23:38            47,485 warning.png
+2017/12/28  23:16            21,124 yellow-magnifier.png
+2017/12/28  23:16            14,320 yes-v3.png
+2017/12/28  23:16            21,513 zoom-in.png
+2017/12/28  23:16            21,515 zoom-out.png
+              80 个文件      2,285,238 字节
+               2 个目录 153,385,623,552 可用字节

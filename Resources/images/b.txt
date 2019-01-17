@@ -1,0 +1,13 @@
+ 驱动器 E 中的卷没有标签。
+ 卷的序列号是 58DA-D5CC
+
+ E:\xiaobo.programming\3DVisionSolutions\3DVisionSolutions\Resources\images 的目录
+
+2017/12/28  23:17            31,309 back-side.png
+2017/12/28  23:17            33,626 bottom-side.png
+2017/12/28  23:14            24,354 front-side.png
+2017/12/28  23:13            34,310 left-side.png
+2017/12/28  23:13            39,502 right-side.png
+2017/12/28  23:14            36,806 top-side.png
+               6 个文件        199,907 字节
+               0 个目录 153,385,619,456 可用字节
